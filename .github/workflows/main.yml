@@ -37,4 +37,4 @@ jobs:
       run: |
         echo "Деплой приложения"
         # Здесь вы можете добавить команды для деплоя, например:
-        # scp app user@your-server:/path/to/deployment/ или вызов API для деплоя.
+        # scp app user@your-server:/path/to/deployment/ или вызов API для деплоя
