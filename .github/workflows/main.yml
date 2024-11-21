@@ -3,7 +3,7 @@ name: Fist CI/CD pipeline
 on:
   push:
     branches:
-      - main  
+      - main  #main
   pull_request:
     branches:
       - main  
