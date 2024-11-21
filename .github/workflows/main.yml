@@ -23,12 +23,12 @@ jobs:
         sudo apt-get install -y build-essential  
      
 
-    - name: Compile the project # Компиляция моего приложения
+    - name: Compile the project # Компиляция приложения
       run: |
         echo "Сборка проекта"
         gcc -o app app.c  
 
-    - name: Run tests # Запускаем наше приложение, чтобы проверить его работу
+    - name: Run tests # Запускаем приложение, чтобы проверить его работу
       run: |
         echo "Запуск тестов"
         ./app  
