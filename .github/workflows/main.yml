@@ -3,10 +3,10 @@ name: Fist CI/CD pipeline
 on:
   push:
     branches:
-      - main  # Ветка, у меня используется main
+      - main  
   pull_request:
     branches:
-      - main  # Ветка, у меня используется main
+      - main  
 
 jobs:
   build:
@@ -16,23 +16,23 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Set up build environment
+    - name: Set up build environment #   Установка необходимых для C инструментов
       run: |
         echo "Установка необходимых зависимостей"
         sudo apt-get update
-        sudo apt-get install -y build-essential  # Установка необходимых для C инструментов
+        sudo apt-get install -y build-essential  
+     
 
-    - name: Compile the project
+    - name: Compile the project # Компиляция моего приложения
       run: |
         echo "Сборка проекта"
-        gcc -o app app.c  # Компиляция моего приложения
+        gcc -o app app.c  
 
-    - name: Run tests
+    - name: Run tests # Запускаем наше приложение, чтобы проверить его работу
       run: |
         echo "Запуск тестов"
-        ./app  # Запускаем наше приложение, чтобы проверить его работу
-
-    - name: Deploy
+        ./app  
+    - name: Deploy  # В первом учебном pipeline Deploy не выполняется, формат шаблона сохранен
       run: |
         echo "Деплой приложения"
-        # В первом учебном pipeline Deploy не выполняется, формат шаблона сохранен
+       
